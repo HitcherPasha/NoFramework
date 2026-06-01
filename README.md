@@ -138,6 +138,19 @@ public/index.php
 | docs/ARCHITECTURE.md  | Architecture, design rules, and constraints     |
 | docs/PROJECT_STATE.md | Current implementation status and handoff notes |
 
+## Design Trade-offs
+
+This project intentionally favors simplicity over additional abstraction.
+
+Examples:
+
+- Repositories return associative arrays instead of domain objects.
+- Routing is implemented explicitly without a framework or DI container.
+- Query parameters are normalized to safe defaults.
+- Controllers contain some presentation preparation logic (for example date formatting) to avoid introducing additional layers for a small application.
+
+For a larger production system, responsibilities such as request validation, resource resolution and presentation mapping would likely be extracted into dedicated components. For this assignment, preference was given to readability and a smaller number of moving parts.
+
 ## License
 
 Test assignment repository — use and evaluate as provided by the author.
