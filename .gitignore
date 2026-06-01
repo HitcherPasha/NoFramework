@@ -1,0 +1,11 @@
+/vendor/
+.env
+/tmp/
+
+/public/assets/uploads/*
+!/public/assets/uploads/.gitkeep
+
+/var/smarty/compile/*
+!/var/smarty/compile/.gitkeep
+/var/smarty/cache/*
+!/var/smarty/cache/.gitkeep
